@@ -1,0 +1,18 @@
+{% extends "PlatformBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} Ajout d'une nouvelle annonce{% endblock %}
+
+{% block body %}
+
+    <h2>Ajout d'une annonce</h2>
+
+    {{ include('PlatformBundle:Advert:form.html.twig') }}
+
+    <p>
+        <a href="{{ path('platform_home') }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à l'accueil
+        </a>
+    </p>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "PlatformBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} Modifier l'annonce n°{{ advert.id }}{% endblock %}
+
+{% block body %}
+
+    <h2>Edition de l'annonce n°{{ advert.id }}</h2>
+
+    {{ include('PlatformBundle:Advert:form.html.twig') }}
+
+    <p>
+        Vous éditez une annonce déjà existante, merci de ne pas changer l'esprit générale de l'annonce déjà publiée.
+    </p>
+
+    <p>
+        <a href="{{ path('platform_view', {'id': advert.id}) }}" class="btn btn-default">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Retour à l'annonce
+        </a>
+    </p>
+
+{% endblock %}
